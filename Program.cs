@@ -17,7 +17,6 @@ class Program
             PdfPage page = pdfDoc.GetPage(i);
             PdfTextExtractor.GetTextFromPage(page, strategy);
 
-            // Imprime as coordenadas da última ocorrência
             Console.WriteLine($"Última ocorrência em {strategy.LastFoundX}, {strategy.LastFoundY}");
         }
 

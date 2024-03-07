@@ -7,7 +7,6 @@ public class CustomLocationTextExtractionStrategy : LocationTextExtractionStrate
 {
     private string wordToFind;
 
-    // Coordenadas da última ocorrência encontrada
     public float LastFoundX { get; private set; }
     public float LastFoundY { get; private set; }
 
@@ -26,7 +25,7 @@ public class CustomLocationTextExtractionStrategy : LocationTextExtractionStrate
             if (text.Contains(wordToFind))
             {
                 Vector location = renderInfo.GetBaseline().GetStartPoint();
-                // Armazena as coordenadas da última ocorrência encontrada
+                
                 LastFoundX = location.Get(Vector.I1);
                 LastFoundY = location.Get(Vector.I2);
             }
